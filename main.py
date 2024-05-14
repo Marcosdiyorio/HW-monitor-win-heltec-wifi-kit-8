@@ -14,7 +14,7 @@ except serial.SerialException as e:
     print(f"Error al abrir el puerto serial: {e}")
     exit()
 
-# Bucle principal para actualizar y enviar los datos cada 5 segundos
+# Bucle principal para actualizar y enviar los datos
 while True:
     # Obtener datos del sistema
     cpu_temp = get_cpu_temperature_windows()
@@ -30,7 +30,7 @@ while True:
     
       # Separador para mayor claridad
 
-    # Esperar 5 segundos antes de la próxima actualización
+    # Esperar 1 segundos antes de la próxima actualización
     time.sleep(1)
 
 # Cierra la conexión serial al salir del bucle (esto normalmente no se ejecutará)
